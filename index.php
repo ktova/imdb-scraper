@@ -15,6 +15,13 @@
     $_SESSION['myList'] = array();
  endif;
 
+// If favorite is deleted
+if( isset($_POST['delete_favori']) ):
+
+    unset($_SESSION['myList'][$_POST['delete_index']]);
+
+endif;
+
 ?>
 
 <html lang="fr">
